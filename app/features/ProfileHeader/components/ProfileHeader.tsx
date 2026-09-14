@@ -208,7 +208,7 @@ export default function ProfileHeader() {
         openWindow(`https://www.snapchat.com/scan?attachmentUrl=${encoded}`);
         break;
       case "email":
-        window.location.href = `mailto:farma24kenya@gmail.com?subject=${text}&body=${encoded}`;
+        window.location.href = "mailto:farma24kenya@gmail.com";
         break;
     }
     setOpen(false);
