@@ -153,7 +153,7 @@ export default function LinkList({ mode = "marketing" }: { mode?: Mode }) {
         open(`https://wa.me/?text=${text}%20${encoded}`);
         break;
       case "email":
-        window.location.href = `mailto:?subject=${text}&body=${encoded}`;
+         window.location.href = "mailto:farma24kenya@gmail.com";
         break;
     }
     setActive(null);

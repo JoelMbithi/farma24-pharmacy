@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { profile } from "../../../shared/profile";
 
-const SHARE_URL = "https://linktr.ee/farma24";
+const SHARE_URL = "https://farma24pharmacy.com";
 const SHARE_TITLE = "Farma24 Pharmacy — Your health, our priority";
 
 const channels = [
