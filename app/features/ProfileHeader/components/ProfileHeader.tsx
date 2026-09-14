@@ -166,53 +166,53 @@ export default function ProfileHeader() {
   }, []);
 
   const handleShare = async (key: string) => {
-    const encoded = encodeURIComponent(SHARE_URL);
-    const text = encodeURIComponent(SHARE_TITLE);
-    const openWindow = (url: string) =>
-      window.open(url, "_blank", "noopener,noreferrer");
+  const encoded = encodeURIComponent(SHARE_URL);
+  const text = encodeURIComponent(SHARE_TITLE);
+  const openWindow = (url: string) =>
+    window.open(url, "_blank", "noopener,noreferrer");
 
-    switch (key) {
-      case "copy": {
-        try {
-          await navigator.clipboard.writeText(SHARE_URL);
-        } catch {
-          const ta = document.createElement("textarea");
-          ta.value = SHARE_URL;
-          document.body.appendChild(ta);
-          ta.select();
-          document.execCommand("copy");
-          document.body.removeChild(ta);
-        }
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-        return;
+  switch (key) {
+    case "copy": {
+      try {
+        await navigator.clipboard.writeText(SHARE_URL);
+      } catch {
+        const ta = document.createElement("textarea");
+        ta.value = SHARE_URL;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
       }
-      case "x":
-        openWindow(`https://twitter.com/intent/tweet?url=${encoded}&text=${text}`);
-        break;
-      case "facebook":
-        openWindow(`https://www.facebook.com/sharer/sharer.php?u=${encoded}`);
-        break;
-      case "whatsapp":
-        openWindow(`https://wa.me/?text=${text}%20${encoded}`);
-        break;
-      case "linkedin":
-        openWindow(`https://www.linkedin.com/sharing/share-offsite/?url=${encoded}`);
-        break;
-      case "messenger":
-        openWindow(
-          `https://www.facebook.com/dialog/send?link=${encoded}&app_id=291494419107518&redirect_uri=${encoded}`
-        );
-        break;
-      case "snapchat":
-        openWindow(`https://www.snapchat.com/scan?attachmentUrl=${encoded}`);
-        break;
-      case "email":
-        window.location.href = "mailto:farma24kenya@gmail.com";
-        break;
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+      return;
     }
-    setOpen(false);
-  };
+    case "x":
+      openWindow(`https://twitter.com/intent/tweet?url=${encoded}&text=${text}`);
+      break;
+    case "facebook":
+      openWindow(`https://www.facebook.com/sharer/sharer.php?u=${encoded}`);
+      break;
+    case "whatsapp":
+      openWindow(`https://wa.me/?text=${text}%20${encoded}`);
+      break;
+    case "linkedin":
+      openWindow(`https://www.linkedin.com/sharing/share-offsite/?url=${encoded}`);
+      break;
+    case "messenger":
+      openWindow(
+        `https://www.facebook.com/dialog/send?link=${encoded}&app_id=291494419107518&redirect_uri=${encoded}`
+      );
+      break;
+    case "snapchat":
+      openWindow(`https://www.snapchat.com/scan?attachmentUrl=${encoded}`);
+      break;
+    case "email":
+      window.location.href = "mailto:farma24kenya@gmail.com";
+      break;
+  }
+  setOpen(false);
+};
 
   return (
     <>
