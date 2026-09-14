@@ -167,7 +167,7 @@ export default function ProfileHeader() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const handleShare = async (key: string) => {
+const handleShare = async (key: string) => {
   const encoded = encodeURIComponent(SHARE_URL);
   const text = encodeURIComponent(SHARE_TITLE);
   const openWindow = (url: string) =>
@@ -189,26 +189,40 @@ export default function ProfileHeader() {
       setTimeout(() => setCopied(false), 2000);
       return;
     }
+
     case "x":
       openWindow(`https://twitter.com/intent/tweet?url=${encoded}&text=${text}`);
       break;
+
     case "facebook":
       openWindow(`https://www.facebook.com/sharer/sharer.php?u=${encoded}`);
       break;
+
     case "whatsapp":
       openWindow(`https://wa.me/?text=${text}%20${encoded}`);
       break;
+
     case "linkedin":
       openWindow(`https://www.linkedin.com/sharing/share-offsite/?url=${encoded}`);
       break;
+
     case "messenger":
-      openWindow(
-        `https://www.facebook.com/dialog/send?link=${encoded}&app_id=291494419107518&redirect_uri=${encoded}`
-      );
+      // Open a chat with Farma24's Facebook page
+      openWindow("https://m.me/farma24pharmacy");
       break;
-    case "snapchat":
-      openWindow(`https://www.snapchat.com/scan?attachmentUrl=${encoded}`);
+
+    case "instagram":
+      // Instagram has no web share API — copy link and open Instagram
+      try {
+        await navigator.clipboard.writeText(SHARE_URL);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch {
+        // Silent fail — user can copy manually
+      }
+      openWindow("https://www.instagram.com/");
       break;
+
     case "email":
       window.location.href = "mailto:farma24kenya@gmail.com";
       break;
