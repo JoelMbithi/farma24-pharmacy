@@ -12,7 +12,7 @@ export default function ComingSoon() {
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/coming-soon-bg.jpg')",
+          backgroundImage: "url('/coming-son-bg.jpg')",
         }}
       />
 
