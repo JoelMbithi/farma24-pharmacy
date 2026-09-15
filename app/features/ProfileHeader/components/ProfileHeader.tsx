@@ -139,7 +139,7 @@ function RotatingAudience() {
 /* ---------- Branch list (used inside signup modal) ---------- */
 const BRANCHES = [
   { name: "T-Mall", phone: "0704041591", hq: true },
-  { name: "Kisumu", phone: "0704041591", hq: false },
+  { name: "Kisumu", phone: "0794298066", hq: false },
   { name: "Upperhill", phone: "0704041591", hq: false },
   { name: "Ngumba", phone: "0796875659", hq: false },
 ];
@@ -203,7 +203,7 @@ const handleShare = async (key: string) => {
       break;
 
     case "linkedin":
-      openWindow(`https://www.linkedin.com/sharing/share-offsite/?url=${encoded}`);
+      openWindow(`https://www.linkedin.com/company/farma24-pharmacy/about/?viewAsMember=true`);
       break;
 
     case "messenger":

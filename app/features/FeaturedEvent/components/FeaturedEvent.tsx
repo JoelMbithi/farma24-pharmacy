@@ -7,7 +7,7 @@ export default function FeaturedEvent() {
         href={featuredEvent.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="group block rounded-lg border border-neutral-200 bg-neutral-50 p-5 transition-colors hover:border-brand-red/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
+        className="group block rounded-lg border border-neutral-200 bg-neutral-50 p-5 transition-colors hover:border-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
         style={{ borderLeft: "3px solid #224F93" }}
       >
         <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-blue">
