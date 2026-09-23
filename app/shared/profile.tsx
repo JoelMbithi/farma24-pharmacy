@@ -90,14 +90,14 @@ export const links: LinkItem[] = [
     domain: "wa.me",
     section: "services",
   },
-  {
+  /* {
     title: "Out-of-Stock Sourcing",
     description: "Can't find your medicine anywhere? We'll source it for you.",
     href: "https://wa.me/254704041591?text=Hi%20Farma24%2C%20I%27m%20looking%20for%20a%20medication%20that%27s%20out%20of%20stock.",
     icon: "pill",
     domain: "wa.me",
     section: "services",
-  },
+  }, */
   {
     title: "Chronic Refill Management",
     description: "For diabetes, hypertension, asthma & long-term medication.",
