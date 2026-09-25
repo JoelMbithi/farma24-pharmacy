@@ -402,7 +402,7 @@ export default function LinkList({ mode = "marketing" }: { mode?: Mode }) {
                 Your health, our priority — from prescription to doorstep.
               </p>
               <a
-                href="https://wa.me/254704041591"
+                href="https://wa.me/0182608910"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex w-full items-center justify-center rounded-md bg-brand-red py-3 text-[13px] font-semibold text-white transition hover:bg-brand-red/90"
