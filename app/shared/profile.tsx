@@ -2,7 +2,7 @@ export const profile = {
   logo: "/logo/Farma24.jpeg",
   name: "Farma24 Pharmacy",
   tagline: "Your health, our priority.",
-  location: "T-Mall · Kisumu · Upperhill · Ngumba",
+  location: "T-Mall · Kisumu · Upperhill · Thika Road (Ngumba)",
   brandBlue: "#1e3a8a",
   brandRed: "#dc2626",
 };
@@ -82,7 +82,7 @@ export const links: LinkItem[] = [
     section: "services",
   },
   {
-    title: "Insurance Processing",
+    title: "Insurance Accepted",
     description:
       "Britam · Old Mutual · CIC · APA · KCB · Co-op · Minet · Fidelity · Icealion · Heritage · More.",
     href: "https://wa.me/254704041591?text=Hi%20Farma24%2C%20I%27d%20like%20to%20process%20my%20insurance.",
@@ -99,7 +99,7 @@ export const links: LinkItem[] = [
     section: "services",
   }, */
   {
-    title: "Chronic Refill Management",
+    title: "Chronic Care Support",
     description: "For diabetes, hypertension, asthma & long-term medication.",
     href: "https://wa.me/254704041591?text=Hi%20Farma24%2C%20I%27d%20like%20help%20managing%20my%20chronic%20refills.",
     icon: "star",
@@ -162,7 +162,7 @@ export const socials = [
 
 /* ---------- Footer ---------- */
 export const footer = {
-  line1: "Farma24 Pharmacy · T-Mall, Kisumu, Upperhill & Ngumba",
+  line1: "Farma24 Pharmacy · T-Mall, Kisumu, Upperhill & Thika Road (Ngumba)",
   // Website link only shows once the site is live.
   // Leave websiteLabel empty to hide it in the footer component.
   websiteLabel: "",

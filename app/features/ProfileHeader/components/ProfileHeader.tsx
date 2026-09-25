@@ -97,9 +97,9 @@ const channels = [
 /* ---------- Rotating audience list for the signup modal ---------- */
 const AUDIENCES = [
   "Patient follow-up support.",
-  "Insurance processing.",
+  "Insurance Accepted.",
   "Out-of-stock sourcing.",
-  "Chronic refill management.",
+  "Chronic Care Support.",
   "WhatsApp prescription handling.",
   "Free delivery.",
 ];
@@ -138,10 +138,10 @@ function RotatingAudience() {
 
 /* ---------- Branch list (used inside signup modal) ---------- */
 const BRANCHES = [
-  { name: "T-Mall", phone: "0704041591", hq: true },
+  { name: "T-Mall", phone: "0182608910", hq: true },
   { name: "Kisumu", phone: "0794298066", hq: false },
   { name: "Upperhill", phone: "0704041591", hq: false },
-  { name: "Ngumba", phone: "0796875659", hq: false },
+  { name: "Thika Road (Ngumba)", phone: "0796875659", hq: false },
 ];
 
 export default function ProfileHeader() {
